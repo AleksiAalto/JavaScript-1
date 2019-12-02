@@ -3,33 +3,35 @@
 <html>
     <head>
         <title>KPS-peli</title>
+        <link href="https://fonts.googleapis.com/css?family=Solway&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="tyyli.css">
     </head>
 
     <body>
-        <div id="taustakuva">
-            <img src="pelitaustakuva.jpg" alt="kuva pelistä">
-        </div>
+        <img src="pelitaustakuva.jpg" alt="kuva pelistä">
 
-        <h1 id="otsikko">Aleksin KPS-peli</h1>
-        <button id="newBtn">Aloita peli alusta</button>
+        <div id="container">
+            <h1 id="otsikko">Aleksin KPS-peli</h1>
+            <div id="pelikentta">
+                <button id="newBtn" class="nappi">Aloita peli alusta</button>
+                <h2>Pelaajan valinta</h2>
+                <div id="pelialue">
+                    <button id="kiviBtn" class="nappi">Kivi</button>
+                    <button id="paperiBtn" class="nappi">Paperi</button>
+                    <button id="saksetBtn" class="nappi">Sakset</button>
+                </div>
+                <h2>Tietokoneen valinta</h2>
+                <img id="valintakuva" src="tausta.jpg">
 
-        <h2>Pelaajan valinta</h2>
-
-        <div id="pelialue">
-            <button id="kiviBtn">Kivi</button>
-            <button id="paperiBtn">Paperi</button>
-            <button id="saksetBtn">Sakset</button>
-        </div>
-        
-        <h2>Tietokoneen valinta</h2>
-        <img id="valintakuva" src="tausta.jpg">
-
-        <h2 id="valinnat">Tulos</h2>
+            </div>
+            <div id="ilmoitustaulu">
+                <h3 id="valinnat">Tulos</h3>
        
-        <h2 id="voittaja">Voittaja selviää, kun pelaat peliä</h2>
-         
-        <p id="pisteet">Pistetilanne: </p>
+                <h2 id="voittaja">Voittaja selviää, kun pelaat peliä</h2>
+                 
+                <p id="pisteet">Pistetilanne: </p>
+            </div>
+        </div>
 
 
 
