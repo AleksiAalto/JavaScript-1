@@ -14,14 +14,7 @@ body{
     height: 100px;
     margin-top: 1em;
 }
-#valinnat{
-    
-  
-}
-#voittaja {
-    
-
-}
-#pisteet {
+#newBtn {
+    display: none;
 }
 

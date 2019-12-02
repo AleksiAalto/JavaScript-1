@@ -1,6 +1,7 @@
 let pelaajanPisteet = 0;
 let tietokoneenPisteet = 0;
 //liitetään html elementit muuttujiin
+let start = document.getElementById("newBtn")
 let kiviValinta = document.getElementById("kiviBtn");
 let paperiValinta = document.getElementById("paperiBtn");
 let saksiValinta = document.getElementById("saksetBtn");
@@ -10,11 +11,26 @@ let voittaja = document.getElementById("voittaja")
 let pisteet = document.getElementById("pisteet")
 let valinnat = document.getElementById("valinnat")
 let otsikko = document.getElementById("otsikko")
-//peli alustetaan
 
+let pelialue = document.getElementById("pelialue")
+
+//peli alustetaan
+function alustaPeli(){
+    otsikko.innerHTML = "Aleksin KPS-peli";
+    valinnat.innerHTML = "Tulos";
+    pelaajanPisteet = 0;
+    tietokoneenPisteet = 0;
+    pelialue.style.display = "initial";
+    voittaja.innerHTML = "Voittaja selviää, kun pelaat peliä";
+    pisteet.innerHTML = "Pistetilanne: ";
+    start.style.display = "none";
+}
 
 //pelin toiminnallisuus
 
+start.addEventListener("click", function(){
+    alustaPeli();
+});
 kiviValinta.addEventListener("click", function(){
     pelaajanValinta("Kivi")
 });
@@ -88,4 +104,10 @@ function getPisteet(pPisteet, tPisteet){
 }
 function voittoNakyma(voittoteksti){
     otsikko.innerHTML = voittoteksti;
+    pelialue.style.display = "none";
+    valinnat.style.display = "none";
+    voittaja.innerHTML = "Lopulliset pisteeet: <br> Pelaajan pisteet: " + pelaajanPisteet +
+    "<br> Tietokoneen pisteet: " + tietokoneenPisteet;
+    start.style.display = "initial";
+
 }
